@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Página de Ejercicio CSS</title>
+
+  <style>
+
+body {
+
+  background-color: #ccc;
+  padding: 0px;
+
+}
+
+.container {
+
+  width: 40%;
+  height: 40%;
+  background-color: white;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+}
+
+.container h1 {
+
+  font-family: Arial, sans-serif;
+  text-align: center;
+
+}
+
+/* Los elementos fluyen en filas y columnas */
+
+.gallery {
+
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+
+}
+
+/* Cada elemento ocupa un 30% del ancho del contenedor */
+
+.gallery img, .gallery p {
+
+  width: calc(30%); 
+
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Página de Ejercicio CSS</h1>
+
+    <div class="gallery">
+      <img src="C:\Users\Gabriel\Bootcamp Introducción a la Programación\HTML, CSS y JavaScript\Ejercicios\Recursos\CatedralCompostela.png" alt="Imagen 1" class="image">
+      <p class="caption">Descripción de la imagen 1</p>
+
+      <img src="C:\Users\Gabriel\Bootcamp Introducción a la Programación\HTML, CSS y JavaScript\Ejercicios\Recursos\TorreHercules.png" alt="Imagen 2" class="image">
+      <p class="caption">Descripción de la imagen 2</p>
+
+      <img src="C:\Users\Gabriel\Bootcamp Introducción a la Programación\HTML, CSS y JavaScript\Ejercicios\Recursos\Galicia.png" alt="Imagen 3" class="image">
+      <p class="caption">Descripción de la imagen 3</p>
+
+    </div>
+
+  </div>
+</body>
+
+</html>

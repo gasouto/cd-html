@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda de Ropa - Sarita</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(202, 202, 202);
+      margin: 0;
+      padding: 0;
+    }
+    h1{
+        text-align: center;
+        background-color: rgb(180, 148, 107);
+        color: white;
+        height: 70px;
+        margin-bottom: 0;
+        margin-top: 0;        
+    }
+    nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background-color:rgb(180, 148, 107);
+}   
+    nav li {
+  margin: 0 15px; 
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    #favoritos {
+  text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+#favoritos h2 {
+  margin-bottom: 20px; /* Agrega un espacio entre el título y los productos */
+}
+
+.product {
+  border: 2px solid #000000;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  width: 300px; /* Establece el ancho deseado para los elementos */
+  margin-right: 10px; /* Agrega espacio entre los elementos (puedes ajustar este valor) */
+  display: inline-block; /* Muestra los productos en una línea horizontal */
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product img:hover {
+  transform: scale(1.2); /*escalamos la imagen, al poner 1.2 es como decir 120% de su tamaño original*/
+  transition: transform 0.3s; /* Agrego una transicion*/
+}
+
+#hombres {
+  text-align: center; /* Centra el texto dentro del contenedor */
+  background-color: rgb(190, 190, 148);
+}
+
+#hombres h2 {
+  margin-bottom: 20px; /* Agrega un espacio entre el título y los productos */
+  margin-top: 0px;
+}
+
+#mujeres{
+    text-align: center;
+    background-color: rgba(172, 78, 50, 0.863);
+}
+
+#mujeres h2 {
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+#ninos{
+    text-align: center;
+    background-color: rgb(172, 152, 130);
+    margin-bottom: 0px;
+}
+
+#ninos h2{
+    margin-top: 0px;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(175, 142, 106);
+        color: white;
+        height:90px;
+        margin: 0 0 0 0;
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Tienda de Ropa - Sarita</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#hombres">Hombres</a></li>
+      <li><a href="#mujeres">Mujeres</a></li>
+      <li><a href="#ninos">Niños</a></li>
+      <li><a href="#favoritos">Favoritos</a></li>
+    </ul>
+  </nav>
+  <section id="favoritos">
+    <h2>Productos Favoritos</h2>
+    <div class="product">
+      <img src="assets/mujer1.jpg" alt="Favorito 1">
+      <h3>Vestido de Fiesta</h3>
+      <p>Precio: 50€</p>
+    </div>
+    <div class="product">
+      <img src="assets/nino2.jpg" alt="Favorito 2">
+      <h3>Camiseta de Diseño</h3>
+      <p>Precio: 45€</p>
+    </div>
+    <div class="product">
+      <img src="assets/hombre1.jpg" alt="Favorito 3">
+      <h3>Camisa elegante</h3>
+      <p>Precio: 65€</p>
+    </div>
+    <!-- Agrega más productos favoritos aquí -->
+  </section>
+
+  <section id="hombres">
+    <h2>Ropa para Hombres</h2>
+    <div class="product">
+      <img src="assets/hombre1.jpg" alt="Hombre 1">
+      <h3>Camisa de Vestir</h3>
+      <p>Precio: 50€</p>
+    </div>
+    <div class="product">
+      <img src="assets/hombre2.jpg" alt="Hombre 2">
+      <h3>Pantalón de Mezclilla</h3>
+      <p>Precio: 70€</p>
+    </div>
+    <div class="product">
+      <img src="assets/hombre1.jpg" alt="Hombre 1">
+      <h3>Camisa de Vestir</h3>
+      <p>Precio: 50€</p>
+    </div>
+    <div class="product">
+      <img src="assets/hombre2.jpg" alt="Hombre 2">
+      <h3>Pantalón de Mezclilla</h3>
+      <p>Precio: 70€</p>
+    </div>
+    <div class="product">
+      <img src="assets/hombre1.jpg" alt="Hombre 1">
+      <h3>Camisa de Vestir</h3>
+      <p>Precio: 50€</p>
+    </div>
+    <div class="product">
+      <img src="assets/hombre2.jpg" alt="Hombre 2">
+      <h3>Pantalón de Mezclilla</h3>
+      <p>Precio: 70€</p>
+    </div>
+    <!-- Agrega más productos para hombres aquí -->
+  </section>
+
+  <section id="mujeres">
+    <h2>Ropa para Mujeres</h2>
+    <div class="product">
+      <img src="assets/mujer1.jpg" alt="Mujer 1">
+      <h3>Vestido de Verano</h3>
+      <p>Precio: 80€</p>
+    </div>
+    <div class="product">
+      <img src="assets/mujer2.jpg" alt="Mujer 2">
+      <h3>Blusa Estampada</h3>
+      <p>Precio: 45€</p>
+    </div>
+    <div class="product">
+      <img src="assets/mujer1.jpg" alt="Mujer 1">
+      <h3>Vestido de Verano</h3>
+      <p>Precio: 80€</p>
+    </div>
+    <div class="product">
+      <img src="assets/mujer2.jpg" alt="Mujer 2">
+      <h3>Blusa Estampada</h3>
+      <p>Precio: 45€</p>
+    </div>
+    <div class="product">
+      <img src="assets/mujer1.jpg" alt="Mujer 1">
+      <h3>Vestido de Verano</h3>
+      <p>Precio: 80€</p>
+    </div>
+    <div class="product">
+      <img src="assets/mujer2.jpg" alt="Mujer 2">
+      <h3>Blusa Estampada</h3>
+      <p>Precio: 45€</p>
+    </div>
+    <!-- Agrega más productos para mujeres aquí -->
+  </section>
+
+  <section id="ninos">
+    <h2>Ropa para Niños</h2>
+    <div class="product">
+      <img src="assets/nino1.jpg" alt="Niño 1">
+      <h3>Conjunto Deportivo</h3>
+      <p>Precio: 35€</p>
+    </div>
+    <div class="product">
+      <img src="assets/nino2.jpg" alt="Niño 2">
+      <h3>Camiseta de Dibujos Animados</h3>
+      <p>Precio: 20€</p>
+    </div>
+    <div class="product">
+      <img src="assets/nino1.jpg" alt="Niño 1">
+      <h3>Conjunto Deportivo</h3>
+      <p>Precio: 35€</p>
+    </div>
+    <div class="product">
+      <img src="assets/nino2.jpg" alt="Niño 2">
+      <h3>Camiseta de Dibujos Animados</h3>
+      <p>Precio: 20€</p>
+    </div>
+    <div class="product">
+      <img src="assets/nino1.jpg" alt="Niño 1">
+      <h3>Conjunto Deportivo</h3>
+      <p>Precio: 35€</p>
+    </div>
+    <div class="product">
+      <img src="assets/nino2.jpg" alt="Niño 2">
+      <h3>Camiseta de Dibujos Animados</h3>
+      <p>Precio: 20€</p>
+    </div>
+    <!-- Agrega más productos para niños aquí -->
+  </section>
+
+
+
+  <footer>
+    <p>&copy; 2023 Tienda de Ropa - Sarita. Todos los derechos reservados.</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Página de Ejercicio CSS</title>
+  <style>
+    .container {
+      width: 800px;
+      height: 430px;
+      margin: 0 auto; /* Centramos el contenedor */
+      padding: 20px;
+      border: 1px solid #000; /* Ponemos borde al contenedor */
+      border-radius: 5px; /*Para que las esquinas sean redondeadas*/
+      text-align: center; /* Centramos el texto que contiene */
+      box-shadow: 0px 2px 5px #AEB6BF /*Le damos sombra al recuadro */
+    }
+
+    .gallery {
+      display: grid; /* Grid para el diseño de la galeria */
+      grid-template-columns: repeat(3, 1fr); /* Creamos 3 columnas del mismo ancho */
+      gap: 20px; /* dejamos un espacio entre las imagenes */
+      justify-content: center; /* Centramos las imagenes dentro de la cuadricula */
+    }
+
+    .image1 {
+      width: 200px; /* Para cambiar el ancho */
+      height: auto; /* Con esto mantenemos las proporciones originales de la imagen */
+    }
+
+    .image2 {
+      width: 200px; 
+      height: auto; 
+    }
+
+    .image3 {
+      width: 200px; 
+      height: auto; 
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Página de Ejercicio CSS</h1>
+
+    <div class="gallery">
+      <img src="MicrosoftTeams-image (1).png" alt="image1" class="image1">
+      <p class="caption">Descripción de la imagen 1</p>
+
+      <img src="MicrosoftTeams-image (2).png" alt="image2" class="image2">
+      <p class="caption">Descripción de la imagen 2</p>
+
+      <img src="MicrosoftTeams-image (3).png" alt="image3" class="image3">
+      <p class="caption">Descripción de la imagen 3</p>
+    </div>
+
+  </div>
+</body>
+
+</html>
+

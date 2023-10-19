@@ -1,0 +1,167 @@
+ /* Estilos Generales */
+    /* Estilos Generales */
+    body {
+      font-family: Arial, sans-serif;
+      /* Fuente y familia de fuentes */
+      background-color: #f2f2f2;
+      /* Color de fondo */
+      margin: 0;
+      /* Margen exterior */
+      padding: 0;
+      /* Relleno interior */
+    }
+
+    /* Estilos del Encabezado */
+    header {
+      background-color: #2e0898;
+      /* Color de fondo */
+      color: #ffffff;
+      /* Color de texto */
+      padding: 20px;
+      /* Espacio interior */
+      text-align: center;
+      /* Alineación de texto */
+      display: flex;
+      /* Establece el elemento como flexbox */
+      justify-content: space-between;
+      /* Distribución de espacio entre elementos */
+      align-items: center;
+      /* Alineación vertical de elementos */
+    }
+
+    header h1 {
+      background-color: gold;
+      /* Color de fondo */
+      color: #2e0898;
+      /* Color de texto */
+      margin: 0;
+      /* Margen */
+      flex-grow: 1;
+      /* Hace que el elemento crezca en relación con otros elementos */
+      text-align: center;
+      /* Alineación de texto */
+    }
+
+    /* Estilos del Enlace de Perfil */
+    .profile-link {
+      display: flex;
+      /* Establece el elemento como flexbox */
+      align-items: center;
+      /* Alineación vertical de elementos */
+      color: #ffffff;
+      /* Color de texto */
+      text-decoration: none;
+      /* Decoración de texto */
+      font-size: 18px;
+      /* Tamaño de fuente */
+    }
+
+    .profile-link img {
+      width: 30px;
+      /* Ancho de imagen */
+      height: 30px;
+      /* Altura de imagen */
+      border-radius: 50%;
+      /* Borde redondeado */
+      margin-right: 10px;
+      /* Margen derecho */
+    }
+
+    /* Estilos de la Lista de Productos */
+    .product-list {
+      display: grid;
+      /* Establece el elemento como cuadrícula */
+      grid-gap: 20px;
+      /* Espacio entre elementos de la cuadrícula */
+      padding: 20px;
+      /* Espacio interior */
+    }
+
+    .product {
+      background-color: #ffffff;
+      /* Color de fondo */
+      padding: 20px;
+      /* Espacio interior */
+      border-radius: 5px;
+      /* Borde redondeado */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      /* Sombra */
+      text-align: center;
+      /* Alineación de texto */
+    }
+
+    .product img {
+      width: 200px;
+      /* Ancho de imagen */
+      height: auto;
+      /* Altura de imagen automática */
+      margin-bottom: 10px;
+      /* Margen inferior */
+    }
+
+    .product h3 {
+      margin-bottom: 10px;
+      /* Margen inferior */
+    }
+
+    .product p {
+      margin-bottom: 20px;
+      /* Margen inferior */
+    }
+
+    .product .price {
+      font-weight: bold;
+      /* Grosor de fuente */
+    }
+
+    .product .btn {
+      display: inline-block;
+      /* Establece el elemento como bloque en línea */
+      padding: 10px 20px;
+      /* background-color: #333333; /* Color de fondo */
+      color: #ffffff;
+      /* Color de texto */
+      text-decoration: none;
+      /* Decoración de texto */
+      border-radius: 4px;
+      /* Borde redondeado */
+      background-color: #333333;
+      /* Color de fondo del botón*/
+    }
+
+    /* Estilos del Pie de Página */
+    footer {
+      background-color: #333333;
+      /* Color de fondo */
+      color: #ffffff;
+      /* Color de texto */
+      padding: 20px;
+      /* Espacio interior */
+      text-align: center;
+      /* Alineación de texto */
+    }
+
+
+    /* Estilos para pantallas grandes */
+    @media screen and (min-width: 1024px) {
+      .product-list {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columnas */
+      }
+    }
+
+    /* Estilos para pantallas medianas */
+    @media screen and (max-width: 1023px) and (min-width: 768px) {
+      .product-list {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas */
+      }
+    }
+
+    /* Estilos para pantallas pequeñas */
+    @media screen and (max-width: 767px) {
+      .product-list {
+        grid-template-columns: 1fr;
+        /* 1 columna */
+      }
+    }

@@ -1,0 +1,146 @@
+ /* Estilos generales */
+
+    body {
+      font-family: Arial, sans-serif;
+      /* Establece la fuente */
+      margin: 0;
+      /* Establece el margen exterior a 0 */
+      padding: 0;
+      /* Establece el relleno interior a 0 */
+    }
+
+    header {
+      background-color: #C8AE7E;
+      /* Establece un color de fondo */
+      padding: 20px;
+      /* Establece el relleno interior */
+      color: #fff;
+      /* Establece el color del texto */
+      text-align: center;
+      /* Establece la alineación del texto */
+    }
+
+    h1 {
+      margin: 0;
+      /* Establece el margen superior e inferior a 0 */
+    }
+
+    nav {
+      background-color: #C8AE7E;
+      /* Establece un color de fondo */
+      padding: 10px;
+      /* Establece el relleno interior */
+    }
+
+    nav ul {
+      list-style-type: none;
+      /* Elimina la lista de puntos */
+      margin: 0;
+      /* Establece el margen exterior a 0 */
+      padding: 0;
+      /* Establece el relleno interior a 0 */
+      text-align: center;
+      /* Establece la alineación del texto */
+    }
+
+    nav ul li {
+      display: inline-block;
+      /* Muestra los elementos en línea */
+      margin-right: 10px;
+      /* Establece el margen derecho */
+    }
+
+    nav ul li a {
+      color: #fff;
+      /* Establece el color del texto */
+      text-decoration: none;
+      /* Elimina la decoración de texto */
+      padding: 5px;
+      /* Establece el relleno interior */
+    }
+
+    section {
+      padding: 20px;
+      /* Establece el relleno interior */
+      background-color: #f2f2f2;
+      /* Establece un color de fondo */
+      text-align: center;
+      /* Establece la alineación del texto */
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      /* Establece el margen inferior */
+    }
+
+    .product {
+      display: inline-block;
+      /* Muestra los elementos en línea */
+      width: 200px;
+      /* Establece el ancho */
+      margin: 10px;
+      /* Establece los márgenes */
+      border: 1px solid #ccc;
+      /* Establece el borde */
+      padding: 10px;
+      /* Establece el relleno interior */
+      background-color: #fff;
+      /* Establece un color de fondo */
+    }
+
+    .product img {
+      max-width: 100%;
+      /* Establece el ancho máximo de la imagen */
+      height: auto;
+      /* Establece la altura automática de la imagen */
+    }
+
+    #favoritos {
+      background-color: #FAFDF3;
+      /* Establece un color de fondo */
+    }
+
+    #favoritos .product img {
+      max-width: 100%;
+      /* Establece el ancho máximo de la imagen */
+      height: auto;
+      /* Establece la altura automática de la imagen */
+      transition: transform 0.3s ease-in-out;
+      /* Establece la transición */
+    }
+
+    #favoritos .product img:hover {
+      transform: scale(1.1);
+      /* Establece la escala en el desplazamiento del mouse */
+    }
+
+    footer {
+      background-color: #C8AE7E;
+      /* Establece un color de fondo */
+      padding: 20px;
+      /* Establece el relleno interior */
+      color: #fff;
+      /* Establece el color del texto */
+      text-align: center;
+      /* Establece la alineación del texto */
+    }
+
+    /* Estilos específicos para cada sección */
+
+    /* Estilos para la sección de Hombres */
+    #hombres {
+      background-color: #F5F5DD;
+      /* Establece un color de fondo */
+    }
+
+    /* Estilos para la sección de Mujeres */
+    #mujeres {
+      background-color: #EAE3C9;
+      /* Establece un color de fondo */
+    }
+
+    /* Estilos para la sección de Niños */
+    #ninos {
+      background-color: #D2BD96;
+      /* Establece un color de fondo */
+    }

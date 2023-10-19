@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HAIQUEA</title>
+  <style>
+    /* Estilos Generales */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(202, 202, 202);
+      margin: 0;
+      padding: 0;
+    }
+
+    img[alt="Icono de Perfil"]{
+        width:50px;
+    }
+
+    header{
+      background-color: blue;
+      display: flex; 
+      align-items: center;
+      justify-content: center; 
+      height: 90px;
+    }
+
+    h1 {
+      background-color: yellow;
+      display: inline;
+      padding: 10px 800px;
+      margin: 0px;
+      
+    }
+
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .btn {
+    background-color: #007bff;
+     color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: white;
+      box-shadow: 0 0 10px;
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .btn {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 5px;
+    }
+
+    .btn:hover{
+        color: gold;
+    }
+
+    .price{
+        font-weight: bold;
+    }
+
+    .product img {
+    width: 200px;
+    height: 200px; 
+    object-fit: cover; 
+    }
+
+    footer{
+
+        text-align: center;
+        background-color: black;
+        color: white;
+        height: 40px;
+        
+    }
+
+    @media screen and (min-width: 1024px) {
+    /* Agrega tus estilos específicos para resoluciones grandes aquí */
+    .product-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+    .product {
+    padding: 20px;
+  }
+
+}
+
+    /* Estilos para pantallas medianas */
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Agrega tus estilos específicos para resoluciones medianas aquí */
+    .product-list {
+     grid-template-columns: repeat(2, 1fr);
+     gap: 10px;
+  }
+    .product {
+    padding: 10px;
+  }
+
+    /* Estilos para pantallas pequeñas */
+    @media screen and (max-width: 767px) {
+  
+  header {
+    height: 70px;
+    }
+
+  h1 {
+    padding: 10px 20px; 
+  }
+  .product-list {
+    padding: 10px; 
+  }
+    }
+
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>HAIQUEA</h1>
+    <a href="profile.html" class="profile-link">
+      <img src="assets/IconoUsuario-removebg-preview.png" alt="Icono de Perfil">
+    </a>
+  </header>
+
+  <div class="product-list">
+    <div class="product">
+      <img src="assets/79bed8d1-c5d5-4798-b627-6ce8dc05307a.jpg" alt="Producto 1">
+      <h3>Producto 1</h3>
+      <p>Descripción del producto 1.</p>
+      <p class="price">9.99€</p>
+      <a href="#" class="btn">Agregar al Carrito</a>
+    </div>
+    <div class="product">
+      <img src="assets/f02bb315-b133-4437-8246-7a9f818909e9.jpg" alt="Producto 2">
+      <h3>Producto 2</h3>
+      <p>Descripción del producto 2.</p>
+      <p class="price">29.99€</p>
+      <a href="#" class="btn">Agregar al Carrito</a>
+    </div>
+    <div class="product">
+      <img src="assets/stortskon-vela-aromatica-vaso-frutos-bosque-rojo__1060651_pe850110_s5.avif" alt="Producto 3">
+      <h3>Producto 3</h3>
+      <p>Descripción del producto 3.</p>
+      <p class="price">5.99€</p>
+      <a href="#" class="btn">Agregar al Carrito</a>
+    </div>
+    <div class="product">
+      <img src="assets/MicrosoftTeams-image (5).png" alt="Producto 4">
+      <h3>Producto 4</h3>
+      <p>Descripción del producto 4.</p>
+      <p class="price">9.99€</p>
+      <a href="#" class="btn">Agregar al Carrito</a>
+    </div>
+    <div class="product">
+      <img src="assets/MicrosoftTeams-image (6).png" alt="Producto 5">
+      <h3>Producto 5</h3>
+      <p>Descripción del producto 5.</p>
+      <p class="price">89.99€</p>
+      <a href="#" class="btn">Agregar al Carrito</a>
+    </div>
+    <div class="product">
+      <img src="assets/mesaikea.jpg" alt="Producto 6">
+      <h3>Producto 6</h3>
+      <p>Descripción del producto 6.</p>
+      <p class="price">39.99€</p>
+      <a href="#" class="btn">Agregar al Carrito</a>
+    </div>
+    <div class="product">
+      <img src="assets/MicrosoftTeams-image (8).png" alt="Producto 7">
+      <h3>Producto 1</h3>
+      <p>Descripción del producto 1.</p>
+      <p class="price">59.99€</p>
+      <a href="#" class="btn">Agregar al Carrito</a>
+    </div>
+    <div class="product">
+      <img src="assets/MicrosoftTeams-image (9).png" alt="Producto 8">
+      <h3>Producto 2</h3>
+      <p>Descripción del producto 2.</p>
+      <p class="price">49.99€</p>
+      <a href="#" class="btn">Agregar al Carrito</a>
+    </div>
+    <div class="product">
+      <img src="assets/MicrosoftTeams-image (10).png" alt="Producto 9">
+      <h3>Producto 3</h3>
+      <p>Descripción del producto 3.</p>
+      <p class="price">109.99€</p>
+      <a href="#" class="btn">Agregar al Carrito</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2023 Tienda en Línea. Todos los derechos reservados.
+  </footer>
+</body>
+
+</html>

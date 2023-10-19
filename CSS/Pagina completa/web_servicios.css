@@ -1,0 +1,125 @@
+ /* Estilos Generales */
+    body {
+      font-family: Arial, sans-serif;
+      /* Se establece la fuente y el estilo del texto */
+      background-color: #f2f2f2;
+      /* Se establece un color de fondo */
+      margin: 0;
+      /* Se elimina el margen exterior */
+    }
+
+    /* Barra de Navegación */
+    .navbar {
+      background-color: #333333;
+      /* Se establece un color de fondo */
+      padding: 10px;
+      /* Se agrega un relleno alrededor de la barra de navegación */
+    }
+
+    .navbar a {
+      color: #ffffff;
+      /* Se establece el color del texto de los enlaces */
+      text-decoration: none;
+      /* Se elimina la decoración de subrayado de los enlaces */
+      margin-right: 10px;
+      /* Se agrega un margen a la derecha de los enlaces */
+    }
+
+    /* Sección de Servicios */
+    #servicios {
+      background-image: url('fondo.jpg');
+      /* Se establece una imagen de fondo para la sección */
+      background-size: cover;
+      /* Se ajusta la imagen de fondo para cubrir todo el espacio disponible */
+      background-position: center;
+      /* Se centra la imagen de fondo */
+      padding: 50px;
+      /* Se agrega un relleno alrededor de la sección */
+      text-align: center;
+      /* Se centra el contenido en la sección */
+    }
+
+    #servicios h2 {
+      color: #333333;
+      /* Se establece el color del título */
+    }
+
+    #servicios .icon {
+      font-size: 36px;
+      /* Se establece el tamaño del ícono */
+      margin-bottom: 20px;
+      /* Se agrega un margen inferior al ícono */
+    }
+
+    /* Sección de Testimonios */
+    #textimonios {
+      padding: 50px;
+      /* Se agrega un relleno alrededor de la sección */
+    }
+
+    #textimonios h2 {
+      color: #333333;
+      /* Se establece el color del título */
+    }
+
+    #textimonios .card {
+      background-color: #ffffff;
+      /* Se establece un color de fondo */
+      padding: 20px;
+      /* Se agrega un relleno alrededor de la tarjeta */
+      border-radius: 5px;
+      /* Se establece un radio de borde */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      /* Se agrega una sombra a la tarjeta */
+      margin-bottom: 20px;
+      /* Se agrega un margen inferior a la tarjeta */
+    }
+
+    #textimonios .card .author {
+      font-weight: bold;
+      /* Se establece el peso de fuente en negrita */
+    }
+
+    /* Formulario de Contacto */
+    #contacto {
+      background-color: #ffffff;
+      /* Se establece un color de fondo */
+      padding: 50px;
+      /* Se agrega un relleno alrededor del formulario */
+      text-align: center;
+      /* Se centra el contenido del formulario */
+    }
+
+    #contacto input,
+    #contacto textarea {
+      width: 100%;
+      /* Se establece el ancho del campo de entrada y el área de texto */
+      padding: 10px;
+      /* Se agrega un relleno alrededor de los campos de entrada y el área de texto */
+      margin-bottom: 20px;
+      /* Se agrega un margen inferior a los campos de entrada y el área de texto */
+      border: 1px solid #cccccc;
+      /* Se establece un borde de 1 píxel con color */
+      border-radius: 5px;
+      /* Se establece un radio de borde */
+    }
+
+    #contacto button {
+      padding: 10px 20px;
+      /* Se agrega un relleno alrededor del botón */
+      background-color: #007bff;
+      /* Se establece un color de fondo */
+      color: #ffffff;
+      /* Se establece el color del texto */
+      border-radius: 3px;
+      /* Se establece un radio de borde */
+      border: none;
+      /* Se elimina el borde */
+      cursor: pointer;
+      /* Se cambia el cursor al pasar por encima del botón */
+    }
+
+    #contacto button:hover {
+      background-color: #0056b3;
+      /* Se establece un nuevo color de fondo al pasar el cursor por encima del botón */
+    }

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>HAIQUEA</title>
+
+  <style>
+
+    /* Estilos Generales */
+
+    body {
+
+        font-family: Arial, sans-serif;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    header {
+
+        background-color: blue;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    header h1 {
+
+        background-color: yellow;
+        text-align: center;
+        width: 95%;
+        padding: 5px;
+        font-size: 18px;
+
+    }
+
+    header img {
+
+        height: 25px;
+        width: 25px;
+        padding-left: 15px;
+        padding-top: 5px;
+
+    }
+
+    .product-list {
+
+        background-color: rgb(216, 215, 215);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+
+    }
+
+    .product {
+
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 24%;
+        margin: 7px;
+
+    }
+
+    .product img {
+
+        height: 50%;
+        width: 50%;
+        margin-top: 30px;
+        margin-bottom: 10px;
+
+    }
+
+    .product h3 {
+
+        font-size: 18px;
+        margin-bottom: 10px;
+
+    }
+
+    .product p {
+
+        font-size: 16px;
+        margin-bottom: 10px;
+
+    }
+
+    .product .price {
+
+        font-size: 15px;
+        font-weight: bold;
+
+    }
+
+    .product .btn {
+
+        text-decoration: none;
+        background-color: rgb(42, 42, 42);
+        color: white;
+        padding: 8px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+
+    }
+
+    /* Estilos para pantallas grandes */
+
+    @media screen and (min-width: 1024px) {
+
+        header h1 {
+
+            width: 95%;
+
+        }
+
+        .product {
+
+            width: 24%;
+
+        }
+
+    }
+
+    /* Estilos para pantallas medianas */
+
+    @media screen and (max-width: 1023px) and (min-width: 768px) {
+ 
+        header h1 {
+
+            width: 90%;
+
+        }
+
+        .product {
+
+            width: 48%;
+
+        }
+     
+    }
+
+    /* Estilos para pantallas pequeñas */
+
+    @media screen and (max-width: 767px) {
+     
+        header h1 {
+
+            width: 85%;
+
+        }
+
+        .product {
+
+            width: 95%;
+
+        }
+
+    }
+
+  </style>
+
+</head>
+
+    <body>
+
+    <header>
+
+        <h1>HAIQUEA</h1>
+
+        <a href="profile.html" class="profile-link"> <img src="image (3).jpg" alt="Icono de Perfil"> </a>
+
+    </header>
+
+    <div class="product-list">
+
+        <div class="product">
+
+            <img src="image (1).jpg" alt="Producto 1">
+            <h3>Producto 1</h3>
+            <p>Descripción del producto 1.</p>
+            <p class="price">9.99€</p>
+            <a href="#" class="btn">Agregar al Carrito</a>
+
+        </div>
+
+        <div class="product">
+
+            <img src="image (2).jpg" alt="Producto 2">
+            <h3>Producto 2</h3>
+            <p>Descripción del producto 2.</p>
+            <p class="price">29.99€</p>
+            <a href="#" class="btn">Agregar al Carrito</a>
+
+        </div>
+
+        <div class="product">
+
+            <img src="image (3).png" alt="Producto 3">
+            <h3>Producto 3</h3>
+            <p>Descripción del producto 3.</p>
+            <p class="price">5.99€</p>
+            <a href="#" class="btn">Agregar al Carrito</a>
+
+        </div>
+
+        <div class="product">
+
+            <img src="image (4).png" alt="Producto 4">
+            <h3>Producto 4</h3>
+            <p>Descripción del producto 4.</p>
+            <p class="price">9.99€</p>
+            <a href="#" class="btn">Agregar al Carrito</a>
+
+        </div>
+
+        <div class="product">
+
+            <img src="image (5).png" alt="Producto 5">
+            <h3>Producto 5</h3>
+            <p>Descripción del producto 5.</p>
+            <p class="price">89.99€</p>
+            <a href="#" class="btn">Agregar al Carrito</a>
+
+        </div>
+
+        <div class="product">
+
+            <img src="image (6).png" alt="Producto 6">
+            <h3>Producto 6</h3>
+            <p>Descripción del producto 6.</p>
+            <p class="price">39.99€</p>
+            <a href="#" class="btn">Agregar al Carrito</a>
+
+        </div>
+
+        <div class="product">
+
+            <img src="image (1).jpg" alt="Producto 7">
+            <h3>Producto 1</h3>
+            <p>Descripción del producto 1.</p>
+            <p class="price">59.99€</p>
+            <a href="#" class="btn">Agregar al Carrito</a>
+
+        </div>
+
+        <div class="product">
+
+            <img src="image (11).png" alt="Producto 8">
+            <h3>Producto 2</h3>
+            <p>Descripción del producto 2.</p>
+            <p class="price">49.99€</p>
+            <a href="#" class="btn">Agregar al Carrito</a>
+
+        </div>
+
+        <div class="product">
+
+            <img src="image (1).png" alt="Producto 9">
+            <h3>Producto 3</h3>
+            <p>Descripción del producto 3.</p>
+            <p class="price">109.99€</p>
+            <a href="#" class="btn">Agregar al Carrito</a>
+
+        </div>
+
+    </div>
+
+    <footer>  &copy; 2023 Tienda en Línea. Todos los derechos reservados. </footer>
+
+    </body>
+
+</html>

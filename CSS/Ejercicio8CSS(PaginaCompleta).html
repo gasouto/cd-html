@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">  
+    <title>Página con Estilos CSS Complejos</title>
+    <style>
+
+body{
+    color: #f2f2f2;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}        
+
+.navbar {
+  background-color: #333333;
+  color: white;
+  padding: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+}
+#servicios {
+  text-align: center;
+  background-image: url(MicrosoftTeams-image.png);
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat; 
+  color: black;
+  height: 300px;
+  padding: 50px;
+}
+.servicios h2{
+  font-size: 36px;    ;
+  margin-bottom: 20px;
+}
+
+#testimonials {
+  padding: 50px;
+}
+
+#textimonios h2{
+  color: #222222;
+  }
+
+#textimonios .card{
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #222222;
+}  
+
+#textimonios .card .author{
+  font-weight: bold;
+}
+
+#contacto{
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+}
+
+#contacto input, #contacto textarea{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+ #contacto button{
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+ }
+
+#contacto button:hover{
+  background-color: #0056b3;
+}
+
+  </style>
+</head>
+
+<body>
+  <header class="navbar">
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="servicios" class="services">
+    <div class="container">
+      <h2>Nuestros Servicios</h2>
+      <div class="icon">🚀</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget felis id dui sodales varius.</p>
+    </div>
+  </section>
+
+  <section id="textimonios" class="testimonials">
+    <div class="container">
+      <h2>Testimonios</h2>
+      <div class="card">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget felis id dui sodales varius.</p>
+        <p class="author">- John Doe</p>
+      </div>
+      <div class="card">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget felis id dui sodales varius.</p>
+        <p class="author">- Jane Smith</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact-form">
+    <div class="container">
+      <h2>Contáctanos</h2>
+      <form>
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <textarea placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>
