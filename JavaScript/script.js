@@ -864,3 +864,6 @@ Solicitar al usuario una fecha de inicio y una fecha de fin.
 Generar una secuencia de fechas diarias entre las dos fechas.
 Mostrar todas las fechas generadas. */
 
+function ejercicio30(){
+  
+}
