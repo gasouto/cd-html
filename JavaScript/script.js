@@ -827,43 +827,121 @@ function ejercicio29(){
 /*  1. Calcular la edad de una persona:
 Solicitar al usuario su fecha de nacimiento.
 Calcular la diferencia en años entre la fecha actual y la fecha de nacimiento.
-Mostrar la edad resultante.
-  2. Calcular el tiempo transcurrido desde una fecha específica:
+Mostrar la edad resultante.*/
+
+function ejercicio30(){
+  var opciones = prompt(
+  )
+}
+
+/*  2. Calcular el tiempo transcurrido desde una fecha específica:
 Solicitar al usuario una fecha en el pasado.
 Calcular la diferencia en días, horas, minutos y segundos entre la fecha actual y la fecha ingresada.
-Mostrar el tiempo transcurrido.
-  3. Obtener el día de la semana de una fecha específica:
+Mostrar el tiempo transcurrido.*/
+function ejercicio31(){
+  var fechaDada = prompt("Ingresa una fecha en el pasado (YYYY-MM-DD HH:MM:SS):");
+  var fechaPasada1 = new Date(fechaDada);
+  var fechaActual = new Date();
+  var diferenciaTiempo = fechaActual - fechaPasada1;
+  var segundos = Math.floor(diferenciaTiempo / 100);
+  var minutos = Math.floor(segundos / 60);
+  var horas = Math.floor(minutos / 60);
+  var dias = Math.floor(horas / 24);
+  segundos %= 60;
+  minutos %= 60;
+  horas %= 24;
+  alert("Han pasado " + dias + " días, " + horas + " horas, " + minutos + " minutos y " + segundos + " segundos desde la fecha ingresada en el pasado.");
+  }
+
+
+/*  3. Obtener el día de la semana de una fecha específica:
 Solicitar al usuario una fecha.
 Obtener el día de la semana correspondiente a esa fecha.
-Mostrar el día de la semana.
-  4. Calcular la fecha de vencimiento de un plazo:
+Mostrar el día de la semana.*/
+function ejercicio32(){
+    var fechaEspecifica = prompt("Dime una fecha que ya haya pasado (en formato AAAA-MM-DD)");
+    var fechaEspecificaObj = new Date(fechaEspecifica);
+    if (isNaN(fechaEspecificaObj)) {
+        document.write("La fecha proporcionada no es válida.");
+    } else {
+        
+        var diasDeLaSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]; //Establecemos los días de la semana
+        var diaDeLaSemana = diasDeLaSemana[fechaEspecificaObj.getDay()];
+        document.write("El día de la semana correspondiente a la fecha ingresada es: " + diaDeLaSemana);
+    }
+}
+
+/*  4. Calcular la fecha de vencimiento de un plazo:
 Solicitar al usuario una fecha de inicio y una duración en días.
 Calcular la fecha de vencimiento sumando la duración a la fecha de inicio.
-Mostrar la fecha de vencimiento.
-  5. Verificar si una fecha es un día festivo:
+Mostrar la fecha de vencimiento.*/
+
+
+/*  5. Verificar si una fecha es un día festivo:
 Solicitar al usuario una fecha.
 Comprobar si esa fecha corresponde a un día festivo predefinido.
-Mostrar si la fecha es un día festivo o no.
-  6. Calcular la diferencia de días entre dos fechas:
+Mostrar si la fecha es un día festivo o no.*/
+//Etiquetas y campos de entrada
+function ejercicio34(){
+for="fecha">Fecha:
+type="date" id="fecha"
+//Párrafo para mostrar el resultado -->
+id="resultado"
+
+    function verificarDiaFestivo() {
+      // Obtiene la fecha ingresada en el campo de entrada
+      var fecha = new Date(document.getElementById("fecha").value);
+
+      // Arreglo de fechas festivas
+      var festivos = [
+        new Date(2023, 0, 1),  // Año Nuevo
+        new Date(2023, 3, 14), // Viernes Santo
+        new Date(2023, 4, 1),  // Día del Trabajador
+        new Date(2023, 6, 25), // Santiago Apóstol
+        new Date(2023, 9, 12), // Fiesta Nacional de España
+        new Date(2023, 10, 1), // Día de Todos los Santos
+        new Date(2023, 11, 6), // Día de la Constitución Española
+        new Date(2023, 11, 25), // Navidad
+      ];
+
+      // Verifica si la fecha ingresada coincide con alguna fecha festiva
+      var esFestivo = festivos.some(function (festivo) {
+        return festivo.getDate() === fecha.getDate() && festivo.getMonth() === fecha.getMonth() && festivo.getFullYear() === fecha.getFullYear();
+      });
+
+      // Muestra el resultado de si es un día festivo o no en el párrafo indicado
+      if (esFestivo) {
+        document.getElementById("resultado").textContent = "La fecha es un día festivo";
+      } else {
+        document.getElementById("resultado").textContent = "La fecha no es un día festivo";
+      }
+    }
+}
+
+/*  6. Calcular la diferencia de días entre dos fechas:
 Solicitar al usuario dos fechas.
 Calcular la diferencia en días entre las dos fechas.
-Mostrar la diferencia de días.
-  7. Obtener la fecha de inicio y fin de una semana específica:
+Mostrar la diferencia de días.*/
+function ejercicio35(){
+  
+}
+
+/*  7. Obtener la fecha de inicio y fin de una semana específica:
 Solicitar al usuario un número de semana y un año.
 Calcular la fecha de inicio y fin de esa semana.
-Mostrar la fecha de inicio y fin.
-  8. Calcular el número de días hábiles entre dos fechas:
+Mostrar la fecha de inicio y fin.*/
+
+/*  8. Calcular el número de días hábiles entre dos fechas:
 Solicitar al usuario una fecha de inicio y una fecha de fin.
 Calcular el número de días hábiles (excluyendo fines de semana) entre las dos fechas.
-Mostrar el número de días hábiles.
- 9. Obtener la fecha actual en diferentes formatos:
+Mostrar el número de días hábiles.*/
+
+/*  9. Obtener la fecha actual en diferentes formatos:
 Obtener la fecha actual.
-Mostrar la fecha en formatos diferentes, como "DD/MM/AAAA", "AAAA-MM-DD", "Día de la semana, DD de Mes de AAAA", etc.
-  10. Generar una secuencia de fechas:
+Mostrar la fecha en formatos diferentes, como "DD/MM/AAAA", "AAAA-MM-DD", "Día de la semana, DD de Mes de AAAA", etc.*/
+
+/*  10. Generar una secuencia de fechas:
 Solicitar al usuario una fecha de inicio y una fecha de fin.
 Generar una secuencia de fechas diarias entre las dos fechas.
 Mostrar todas las fechas generadas. */
 
-function ejercicio30(){
-  
-}
