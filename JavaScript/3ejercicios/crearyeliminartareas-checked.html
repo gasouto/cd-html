@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf8">
+  <title>Lista de Tareas</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Estilos del título */
+    h1 {
+      text-align: center;
+      /* Alinea el texto al centro */
+      color: #333;
+      /* Define el color del texto */
+    }
+
+    /* Estilos del formulario */
+    #formulario {
+      text-align: center;
+      /* Alinea el contenido del formulario al centro */
+      margin-bottom: 20px;
+      /* Establece un margen inferior de 20px */
+    }
+
+    /* Estilos de los campos de texto del formulario */
+    #formulario input[type="text"] {
+      padding: 8px;
+      /* Establece un relleno interno de 8px */
+      font-size: 16px;
+      /* Establece el tamaño de fuente en 16px */
+    }
+
+    /* Estilos del botón del formulario */
+    #formulario button {
+      padding: 8px 16px;
+      /* Establece un relleno interno de 8px en la parte superior y inferior y 16px en los lados izquierdo y derecho */
+      font-size: 16px;
+      /* Establece el tamaño de fuente en 16px */
+      background-color: #4CAF50;
+      /* Establece el color de fondo del botón */
+      color: #fff;
+      /* Establece el color del texto del botón */
+      border: none;
+      /* Elimina los bordes del botón */
+      cursor: pointer;
+      /* Cambia el cursor al pasar por encima del botón */
+    }
+
+    /* Estilos de la lista */
+    #lista {
+      list-style-type: none;
+      /* Elimina los estilos de la lista (viñetas, números, etc.) */
+      padding: 0;
+      /* Elimina el relleno interno de la lista */
+    }
+
+    /* Estilos de las tareas */
+    .tarea {
+      display: flex;
+      /* Establece el diseño de la tarea como un contenedor flexible */
+      align-items: center;
+      /* Centra verticalmente los elementos dentro del contenedor */
+      margin-bottom: 10px;
+      /* Establece un margen inferior de 10px entre las tareas */
+    }
+
+    /* Estilos del botón de eliminar tarea */
+    .tarea button {
+      background-color: #f44336;
+      /* Establece el color de fondo del botón de eliminar tarea */
+      color: #fff;
+      /* Establece el color del texto del botón de eliminar tarea */
+      border: none;
+      /* Elimina los bordes del botón de eliminar tarea */
+      padding: 4px 8px;
+      /* Establece un relleno interno de 4px en la parte superior e inferior y 8px en los lados izquierdo y derecho */
+      font-size: 14px;
+      /* Establece el tamaño de fuente en 14px */
+      margin-left: 10px;
+      /* Establece un margen izquierdo de 10px para separar el botón de eliminar de la tarea */
+      cursor: pointer;
+      /* Cambia el cursor al pasar por encima del botón de eliminar tarea */
+    }
+
+    /* Estilos de una tarea completada */
+    .completada {
+      text-decoration: line-through;
+      /* Aplica una línea tachada al texto de la tarea completada */
+      color: #999;
+      /* Establece el color del texto de la tarea completada */
+    }
+
+    /* Estilos de las secciones de tareas completadas y pendientes */
+    #tareas-completadas,
+    #tareas-pendientes {
+      margin-bottom: 20px;
+      /* Establece un margen inferior de 20px entre las secciones de tareas completadas y pendientes */
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Lista de Tareas</h1>
+
+  <div id="formulario">
+    <input type="text" id="tarea" placeholder="Ingrese una tarea">
+    <button onclick="agregarTarea()">Agregar tarea</button>
+  </div>
+
+  <div id="tareas-completadas">
+    <h2>Tareas Completadas<span id="cantidad-completadas"></span></h2>
+    <ul id="lista-completadas"></ul>
+  </div>
+
+  <div id="tareas-pendientes">
+    <h2>Tareas Pendientes<span id="cantidad-pendientes"></span></h2>
+    <ul id="lista-pendientes"></ul>
+  </div>
+
+  <script>
+    var listaCompletadas = document.getElementById("lista-completadas"); // Obtiene la lista de tareas completadas por su ID
+    var listaPendientes = document.getElementById("lista-pendientes"); // Obtiene la lista de tareas pendientes por su ID
+    var inputTarea = document.getElementById("tarea"); // Obtiene el campo de texto para ingresar una tarea por su ID
+
+    function agregarTarea() {
+      var tareaTexto = inputTarea.value.trim(); // Obtiene el texto ingresado en el campo de texto y lo limpia de espacios en blanco al inicio y al final
+
+      if (tareaTexto !== "") { // Verifica que el texto de la tarea no esté vacío
+        var tareaElemento = document.createElement("li"); // Crea un elemento de lista (<li>) para representar la tarea
+        tareaElemento.className = "tarea"; // Asigna la clase "tarea" al elemento de lista
+
+        var checkbox = document.createElement("input"); // Crea un elemento de entrada (<input>) para el checkbox
+        checkbox.type = "checkbox"; // Establece el tipo de entrada como checkbox
+        checkbox.className = "checkbox"; // Asigna la clase "checkbox" al checkbox
+
+        var botonEliminar = document.createElement("button"); // Crea un elemento de botón (<button>) para el botón de eliminar tarea
+        botonEliminar.textContent = "Eliminar"; // Establece el texto del botón como "Eliminar"
+        botonEliminar.onclick = function () {
+          // Agrega un evento onclick al botón de eliminar tarea
+          tareaElemento.parentNode.removeChild(tareaElemento); // Elimina el elemento de lista de tareas al que pertenece el botón de eliminar
+          actualizarCantidadTareas(); // Actualiza la cantidad de tareas completadas y pendientes
+        };
+
+        tareaElemento.appendChild(checkbox); // Agrega el checkbox al elemento de lista de la tarea
+        tareaElemento.appendChild(document.createTextNode(tareaTexto)); // Agrega el texto de la tarea como un nodo de texto al elemento de lista
+        tareaElemento.appendChild(botonEliminar); // Agrega el botón de eliminar tarea al elemento de lista
+
+        checkbox.onchange = function () {
+          // Agrega un evento onchange al checkbox
+          if (checkbox.checked) {
+            // Verifica si el checkbox está marcado
+            tareaElemento.className = "tarea completada"; // Asigna la clase "tarea completada" al elemento de lista para indicar que la tarea está completada
+            listaCompletadas.appendChild(tareaElemento); // Mueve el elemento de lista a la lista de tareas completadas
+          } else {
+            tareaElemento.className = "tarea"; // Asigna la clase "tarea" al elemento de lista para indicar que la tarea está pendiente
+            listaPendientes.appendChild(tareaElemento); // Mueve el elemento de lista a la lista de tareas pendientes
+          }
+          actualizarCantidadTareas(); // Actualiza la cantidad de tareas completadas y pendientes
+        };
+
+        listaPendientes.appendChild(tareaElemento); // Agrega el elemento de lista a la lista de tareas pendientes
+        actualizarCantidadTareas(); // Actualiza la cantidad de tareas completadas y pendientes
+
+        inputTarea.value = ""; // Limpia el campo de texto luego de agregar la tarea
+      }
+    }
+
+    function actualizarCantidadTareas() {
+      var cantidadCompletadas = listaCompletadas.children.length; // Obtiene la cantidad de tareas completadas contando los elementos hijos de la lista de tareas completadas
+      var cantidadPendientes = listaPendientes.children.length; // Obtiene la cantidad de tareas pendientes contando los elementos hijos de la lista de tareas pendientes
+      document.getElementById("cantidad-completadas").textContent = `: ${cantidadCompletadas}`; // Actualiza el texto de la cantidad de tareas completadas
+      document.getElementById("cantidad-pendientes").textContent = `: ${cantidadPendientes}`; // Actualiza el texto de la cantidad de tareas pendientes
+    }
+
+  </script>
+</body>
+
+</html>

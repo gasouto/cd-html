@@ -923,25 +923,40 @@ Solicitar al usuario dos fechas.
 Calcular la diferencia en días entre las dos fechas.
 Mostrar la diferencia de días.*/
 function ejercicio35(){
-  
+
 }
 
 /*  7. Obtener la fecha de inicio y fin de una semana específica:
 Solicitar al usuario un número de semana y un año.
 Calcular la fecha de inicio y fin de esa semana.
 Mostrar la fecha de inicio y fin.*/
+function ejercicio36(){
+
+}
+
 
 /*  8. Calcular el número de días hábiles entre dos fechas:
 Solicitar al usuario una fecha de inicio y una fecha de fin.
 Calcular el número de días hábiles (excluyendo fines de semana) entre las dos fechas.
 Mostrar el número de días hábiles.*/
+function ejercicio37(){
+  var fechaInicio = prompt("Ingresa fecha de inicio")
+}
+
 
 /*  9. Obtener la fecha actual en diferentes formatos:
 Obtener la fecha actual.
 Mostrar la fecha en formatos diferentes, como "DD/MM/AAAA", "AAAA-MM-DD", "Día de la semana, DD de Mes de AAAA", etc.*/
+function ejercicio36(){
+  
+}
+
 
 /*  10. Generar una secuencia de fechas:
 Solicitar al usuario una fecha de inicio y una fecha de fin.
 Generar una secuencia de fechas diarias entre las dos fechas.
 Mostrar todas las fechas generadas. */
+function ejercicio37(){
+
+}
 
